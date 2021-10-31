@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF2DA88E272E96D0004B6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA88D272E96D0004B6068 /* AppDelegate.swift */; };
+		BF2DA890272E96D0004B6068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA88F272E96D0004B6068 /* ViewController.swift */; };
+		BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA891272E96D1004B6068 /* Assets.xcassets */; };
+		BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA893272E96D1004B6068 /* Main.storyboard */; };
+		BF2DA8A0272E96D2004B6068 /* ArgonautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */; };
+		BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */; };
+		BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF2DA89C272E96D1004B6068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF2DA882272E96D0004B6068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2DA889272E96D0004B6068;
+			remoteInfo = Argonaut;
+		};
+		BF2DA8A6272E96D2004B6068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF2DA882272E96D0004B6068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF2DA889272E96D0004B6068;
+			remoteInfo = Argonaut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF2DA88A272E96D0004B6068 /* Argonaut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argonaut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2DA88D272E96D0004B6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF2DA88F272E96D0004B6068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF2DA891272E96D1004B6068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF2DA894272E96D1004B6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF2DA896272E96D1004B6068 /* Argonaut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Argonaut.entitlements; sourceTree = "<group>"; };
+		BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgonautTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautTests.swift; sourceTree = "<group>"; };
+		BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgonautUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITests.swift; sourceTree = "<group>"; };
+		BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF2DA887272E96D0004B6068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA898272E96D1004B6068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA8A2272E96D2004B6068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF2DA881272E96D0004B6068 = {
+			isa = PBXGroup;
+			children = (
+				BF2DA88C272E96D0004B6068 /* Argonaut */,
+				BF2DA89E272E96D1004B6068 /* ArgonautTests */,
+				BF2DA8A8272E96D2004B6068 /* ArgonautUITests */,
+				BF2DA88B272E96D0004B6068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF2DA88B272E96D0004B6068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA88A272E96D0004B6068 /* Argonaut.app */,
+				BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */,
+				BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF2DA88C272E96D0004B6068 /* Argonaut */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA88D272E96D0004B6068 /* AppDelegate.swift */,
+				BF2DA88F272E96D0004B6068 /* ViewController.swift */,
+				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
+				BF2DA893272E96D1004B6068 /* Main.storyboard */,
+				BF2DA896272E96D1004B6068 /* Argonaut.entitlements */,
+			);
+			path = Argonaut;
+			sourceTree = "<group>";
+		};
+		BF2DA89E272E96D1004B6068 /* ArgonautTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */,
+			);
+			path = ArgonautTests;
+			sourceTree = "<group>";
+		};
+		BF2DA8A8272E96D2004B6068 /* ArgonautUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */,
+				BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */,
+			);
+			path = ArgonautUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF2DA889272E96D0004B6068 /* Argonaut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF2DA8AF272E96D2004B6068 /* Build configuration list for PBXNativeTarget "Argonaut" */;
+			buildPhases = (
+				BF2DA886272E96D0004B6068 /* Sources */,
+				BF2DA887272E96D0004B6068 /* Frameworks */,
+				BF2DA888272E96D0004B6068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Argonaut;
+			productName = Argonaut;
+			productReference = BF2DA88A272E96D0004B6068 /* Argonaut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF2DA89A272E96D1004B6068 /* ArgonautTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF2DA8B2272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautTests" */;
+			buildPhases = (
+				BF2DA897272E96D1004B6068 /* Sources */,
+				BF2DA898272E96D1004B6068 /* Frameworks */,
+				BF2DA899272E96D1004B6068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF2DA89D272E96D1004B6068 /* PBXTargetDependency */,
+			);
+			name = ArgonautTests;
+			productName = ArgonautTests;
+			productReference = BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF2DA8A4272E96D2004B6068 /* ArgonautUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF2DA8B5272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautUITests" */;
+			buildPhases = (
+				BF2DA8A1272E96D2004B6068 /* Sources */,
+				BF2DA8A2272E96D2004B6068 /* Frameworks */,
+				BF2DA8A3272E96D2004B6068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF2DA8A7272E96D2004B6068 /* PBXTargetDependency */,
+			);
+			name = ArgonautUITests;
+			productName = ArgonautUITests;
+			productReference = BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF2DA882272E96D0004B6068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					BF2DA889272E96D0004B6068 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					BF2DA89A272E96D1004B6068 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BF2DA889272E96D0004B6068;
+					};
+					BF2DA8A4272E96D2004B6068 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = BF2DA889272E96D0004B6068;
+					};
+				};
+			};
+			buildConfigurationList = BF2DA885272E96D0004B6068 /* Build configuration list for PBXProject "Argonaut" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF2DA881272E96D0004B6068;
+			productRefGroup = BF2DA88B272E96D0004B6068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF2DA889272E96D0004B6068 /* Argonaut */,
+				BF2DA89A272E96D1004B6068 /* ArgonautTests */,
+				BF2DA8A4272E96D2004B6068 /* ArgonautUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF2DA888272E96D0004B6068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */,
+				BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA899272E96D1004B6068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA8A3272E96D2004B6068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF2DA886272E96D0004B6068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2DA890272E96D0004B6068 /* ViewController.swift in Sources */,
+				BF2DA88E272E96D0004B6068 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA897272E96D1004B6068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2DA8A0272E96D2004B6068 /* ArgonautTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2DA8A1272E96D2004B6068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */,
+				BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF2DA89D272E96D1004B6068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF2DA889272E96D0004B6068 /* Argonaut */;
+			targetProxy = BF2DA89C272E96D1004B6068 /* PBXContainerItemProxy */;
+		};
+		BF2DA8A7272E96D2004B6068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF2DA889272E96D0004B6068 /* Argonaut */;
+			targetProxy = BF2DA8A6272E96D2004B6068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF2DA893272E96D1004B6068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF2DA894272E96D1004B6068 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF2DA8AD272E96D2004B6068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF2DA8AE272E96D2004B6068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BF2DA8B0272E96D2004B6068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Argonaut/Argonaut.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.Argonaut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BF2DA8B1272E96D2004B6068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Argonaut/Argonaut.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.Argonaut;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BF2DA8B3272E96D2004B6068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Argonaut.app/Contents/MacOS/Argonaut";
+			};
+			name = Debug;
+		};
+		BF2DA8B4272E96D2004B6068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Argonaut.app/Contents/MacOS/Argonaut";
+			};
+			name = Release;
+		};
+		BF2DA8B6272E96D2004B6068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Argonaut;
+			};
+			name = Debug;
+		};
+		BF2DA8B7272E96D2004B6068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLH9UBQV34;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Argonaut;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF2DA885272E96D0004B6068 /* Build configuration list for PBXProject "Argonaut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2DA8AD272E96D2004B6068 /* Debug */,
+				BF2DA8AE272E96D2004B6068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF2DA8AF272E96D2004B6068 /* Build configuration list for PBXNativeTarget "Argonaut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2DA8B0272E96D2004B6068 /* Debug */,
+				BF2DA8B1272E96D2004B6068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF2DA8B2272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2DA8B3272E96D2004B6068 /* Debug */,
+				BF2DA8B4272E96D2004B6068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF2DA8B5272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2DA8B6272E96D2004B6068 /* Debug */,
+				BF2DA8B7272E96D2004B6068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF2DA882272E96D0004B6068 /* Project object */;
+}
