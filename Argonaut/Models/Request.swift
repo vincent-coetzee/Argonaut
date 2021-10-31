@@ -7,6 +7,9 @@
 
 import Foundation
 
+///
+/// Requests track data sent to the server
+/// 
 internal class Request
     {
     public let index = UUID()

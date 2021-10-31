@@ -7,14 +7,15 @@
 
 import Foundation
 
+///
+/// Responses track responses from the server
+///
 public class Response
     {
-    private unowned var request: Request?
-    private var payload: NSDictionary
+    internal var json: NSDictionary
     
-    init(request: Request,payload: NSDictionary)
+    init(json: NSDictionary)
         {
-        self.request = request
-        self.payload = payload
+        self.json = json
         }
     }

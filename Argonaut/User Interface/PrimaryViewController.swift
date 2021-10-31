@@ -7,12 +7,6 @@
 
 import Cocoa
 
-internal enum Kind
-    {
-    case request
-    case response
-    }
-    
 class PrimaryViewController: NSViewController
     {
     ///
@@ -138,11 +132,16 @@ class PrimaryViewController: NSViewController
     private func setSelectedQuery(_ query: Query)
         {
         self.selectedQuery = query
-        self.requestController.request = query.request
-        self.responseController.response = query.response
+        self.requestController.json = query.request.json
+        self.responseController.json = query.response?.json
         }
     }
 
+///
+/// The behaviour required of a TableViewDelegate, handle number of rows
+/// and the selection of a particular row. When a row is selected, locate
+/// the appropriate query and update the JSON controllers accordingly.
+///
 extension PrimaryViewController: NSTableViewDelegate
     {
     func numberOfRows(in tableView: NSTableView) -> Int
@@ -160,7 +159,9 @@ extension PrimaryViewController: NSTableViewDelegate
         self.setSelectedQuery(self.queries[selectedRow])
         }
     }
-
+///
+/// Methods to supply data to the queries table view.
+///
 extension PrimaryViewController: NSTableViewDataSource
     {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?

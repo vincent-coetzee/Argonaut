@@ -31,6 +31,7 @@
 		BFFF6732272EE50D00E51A1A /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6730272EE50D00E51A1A /* JSONViewController.swift */; };
 		BFFF6733272EE50D00E51A1A /* JSONViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFF6731272EE50D00E51A1A /* JSONViewController.xib */; };
 		BFFF6737272EF59500E51A1A /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6736272EF59500E51A1A /* RequestResult.swift */; };
+		BFFF6739272F14F100E51A1A /* TextViewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6738272F14F100E51A1A /* TextViewCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BFFF6730272EE50D00E51A1A /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
 		BFFF6731272EE50D00E51A1A /* JSONViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONViewController.xib; sourceTree = "<group>"; };
 		BFFF6736272EF59500E51A1A /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		BFFF6738272F14F100E51A1A /* TextViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,19 +135,20 @@
 		BF2DA8BA272E9AA8004B6068 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */,
-				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
-				BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */,
 				BF2DA88D272E96D0004B6068 /* AppDelegate.swift */,
-				BF2DA893272E96D1004B6068 /* Main.storyboard */,
+				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
 				BF2DA8CD272EA478004B6068 /* JSONArrayItem.swift */,
-				BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */,
-				BFFF671C272ED03800E51A1A /* JSONTreeConverter.swift */,
-				BFFF6720272ED9F500E51A1A /* JSONNumberItem.swift */,
-				BFFF6722272EDA3E00E51A1A /* JSONStringItem.swift */,
+				BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */,
 				BFFF6724272EDA6800E51A1A /* JSONNullItem.swift */,
+				BFFF6720272ED9F500E51A1A /* JSONNumberItem.swift */,
+				BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */,
+				BFFF6722272EDA3E00E51A1A /* JSONStringItem.swift */,
+				BFFF671C272ED03800E51A1A /* JSONTreeConverter.swift */,
 				BFFF6730272EE50D00E51A1A /* JSONViewController.swift */,
 				BFFF6731272EE50D00E51A1A /* JSONViewController.xib */,
+				BF2DA893272E96D1004B6068 /* Main.storyboard */,
+				BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */,
+				BFFF6738272F14F100E51A1A /* TextViewCellView.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				BF2DA8DB272EAAFD004B6068 /* SquadMember.swift in Sources */,
 				BFFF671D272ED03800E51A1A /* JSONTreeConverter.swift in Sources */,
 				BFFF6729272EDF1100E51A1A /* Query.swift in Sources */,
+				BFFF6739272F14F100E51A1A /* TextViewCellView.swift in Sources */,
 				BF2DA8D1272EA621004B6068 /* Optional+Extensions.swift in Sources */,
 				BF2DA8CC272EA368004B6068 /* JSONElementItem.swift in Sources */,
 				BFFF6723272EDA3E00E51A1A /* JSONStringItem.swift in Sources */,

@@ -11,7 +11,7 @@ internal class JSONArrayItem: JSONElementItem
     {
     internal override var typeIcon: NSImage
         {
-        if let icon = NSImage(named: "JSONArrayIcon")
+        if let icon = NSImage(named: "JSONIconArray")
             {
             icon.isTemplate = true
             return(icon)
@@ -21,7 +21,7 @@ internal class JSONArrayItem: JSONElementItem
         
     internal override var value: String
         {
-        "\(self.array.count) items"
+        "\(self.array.count) elements"
         }
         
     internal override var childCount: Int

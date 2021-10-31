@@ -7,8 +7,21 @@
 
 import Foundation
 
+///
+///
+/// A squad defines the data structure for the query sent to the server.
+/// A squad is defined in this way so that JSONEncoder can be used to encode
+/// the data into a format appropriate to sending to the server. JSON that comes
+/// back is decoded using JSONSerialization because it's easier to display the
+/// data the is structured as Arrays and Dictionaries.
+///
+///
 public struct Squad: Encodable
     {
+    ///
+    /// Random information to be used when generating a random squad
+    /// The data for generating a random squad member can be found in the SquadMember struct.
+    ///
     private static let kSquadPart1Names = ["Magic","Power","Control","Mega","Epsilon","Alpha","Go","Force"]
     private static let kSquadPart2Names = ["Squad","Group","Crew","People","Force"]
     private static let kHomeTownNames = ["Mega City","Little Place","Big Rock","Little Rock","Smallville","Townsville","Placeville","Peace Town","Magic Rock","Big Falls","Little Falls","Little River","Big River","Rock River"]
@@ -27,6 +40,9 @@ public struct Squad: Encodable
         return(Squad(squadName: name, formed: Date.randomPast, homeTown: homeTown, active: active, members: members))
         }
         
+    ///
+    /// Pick a string from an array of strings. Method is copied here from SquadMember for convenience.
+    ///
     private static func pickString(from: Array<String>) -> String
         {
         let index = Int.random(in: 0..<from.count)
@@ -34,6 +50,9 @@ public struct Squad: Encodable
         return(string)
         }
         
+    ///
+    /// The fields that a Squad has
+    /// 
     internal let squadName: String
     internal let formed: Date
     internal let homeTown: String

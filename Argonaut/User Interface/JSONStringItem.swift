@@ -5,15 +5,25 @@
 //  Created by Vincent Coetzee on 31/10/21.
 //
 
-import Foundation
+import Cocoa
 
 internal class JSONStringItem: JSONElementItem
     {
-    private let string: NSString
+    internal override var typeIcon: NSImage
+        {
+        NSImage(named: "JSONIconString")!
+        }
+        
+    internal override var value: String
+        {
+        self.string
+        }
+        
+    private let string: String
     
     init(name: String,string: NSString)
         {
-        self.string = string
+        self.string = string as String
         super.init(name: name)
         }
     }

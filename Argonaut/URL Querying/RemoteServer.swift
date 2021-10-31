@@ -38,7 +38,7 @@ internal class RemoteServer
                     let incoming = try JSONSerialization.jsonObject(with: data, options: [])
                     if let dictionary = incoming as? NSDictionary
                         {
-                        let response = Response(request: query.request, payload: dictionary)
+                        let response = Response(json: dictionary)
                         query.response = response
                         closure(.success(query))
                         }

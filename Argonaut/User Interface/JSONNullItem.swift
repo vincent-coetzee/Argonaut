@@ -5,8 +5,17 @@
 //  Created by Vincent Coetzee on 31/10/21.
 //
 
-import Foundation
+import Cocoa
 
 internal class JSONNullItem: JSONElementItem
     {
+    internal override var isNull: Bool
+        {
+        true
+        }
+        
+    internal override var typeIcon: NSImage
+        {
+        NSImage(named: "JSONIconNull")!
+        }
     }

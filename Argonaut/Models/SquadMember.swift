@@ -7,6 +7,9 @@
 
 import Foundation
 
+///
+/// Made as Encodable so JSONEncoder can be used on it. For more detail see Squad
+///
 public struct SquadMember: Encodable
     {
     ///
@@ -42,6 +45,11 @@ public struct SquadMember: Encodable
         return(string)
         }
         
+    ///
+    ///
+    /// Fields needed by a squad member
+    ///
+    /// 
     internal let name: String
     internal let age: Int
     internal let secretIdentity: String

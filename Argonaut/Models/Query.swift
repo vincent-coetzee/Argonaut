@@ -7,8 +7,17 @@
 
 import Foundation
 
+///
+///
+/// A query keeps track of the requests made to the server, the url and time they were made
+/// and the results that came back from the server. They form the basis of the UI
+///
+///
 internal class Query
     {
+    ///
+    /// Generate a random query for sending to the server
+    ///
     internal static func makeRandomQuery() throws -> Query
         {
         let name = RemoteServer.kServerURL
@@ -22,7 +31,9 @@ internal class Query
             }
         throw(RequestResult.convertingToJSONFailed)
         }
-        
+    ///
+    /// Dates are formatted to DD/MM/YYYY HH:MM:SS
+    ///
     internal static let dateFormatter =
         {
         () -> DateFormatter in
@@ -35,7 +46,12 @@ internal class Query
         {
         Self.dateFormatter.string(from: self.date)
         }
-        
+    
+    ///
+    ///
+    /// Fields needed by a query
+    ///
+    /// 
     internal let name: String
     internal let date: Date
     internal let request: Request

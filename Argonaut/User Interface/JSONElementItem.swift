@@ -15,7 +15,31 @@ internal class JSONElementItem
             {
             return(JSONObjectItem(name: name,dictionary: element as! NSDictionary))
             }
-        return(JSONElementItem(name:""))
+        else if element is NSArray
+            {
+            return(JSONArrayItem(name: name,array: element as! NSArray))
+            }
+        else if element is NSString
+            {
+            return(JSONStringItem(name: name,string: element as! NSString))
+            }
+        else if element is NSNumber
+            {
+            return(JSONNumberItem(name: name,number: element as! NSNumber))
+            }
+        else if element is NSNull
+            {
+            return(JSONNullItem(name: name))
+            }
+        else
+            {
+            fatalError("This should not happen because it means the response from the server violated the definition of JSON.")
+            }
+        }
+        
+    internal var isNull: Bool
+        {
+        false
         }
         
     internal var typeIcon: NSImage

@@ -34,13 +34,15 @@ internal class JSONViewController: NSViewController
     @IBOutlet var typeColumn: NSTableColumn!
     
     private var items = JSONElementItems()
+    private var currentRowHeights: Array<Int> = []
     
     override func viewDidLoad()
         {
         super.viewDidLoad()
         self.outliner.dataSource = self
         self.outliner.delegate = self
-        self.typeColumn.sizeToFit()
+        self.typeColumn.width = 38
+        self.outliner.font = NSFont.systemFont(ofSize: 14)
         }
     
     private func update(with elements: JSONElementItems)
@@ -70,7 +72,22 @@ extension JSONViewController: NSOutlineViewDataSource
         
     @objc public func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat
         {
-        return(24)
+        guard let element = item as? JSONElementItem else
+            {
+            return(0)
+            }
+        guard let column = outlineView.tableColumn(withIdentifier: Self.kValueFieldIdentifier) else
+            {
+            return(0)
+            }
+        let width = column.width
+        let startSize = NSSize(width: width,height: 0)
+        let font = NSFont.systemFont(ofSize: 14)
+        let string = element.isNull ? "" : element.value
+        let attributedString = NSAttributedString(string: string,attributes: [.font: font])
+        let rect = attributedString.boundingRect(with: startSize, options: [.usesFontLeading,.usesLineFragmentOrigin])
+        print("STRING: \(string) RECT: \(rect)")
+        return(rect.size.height)
         }
         
     @objc public func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any
@@ -94,29 +111,15 @@ extension JSONViewController: NSOutlineViewDataSource
             }
         return(false)
         }
-        
-//    @objc public func outlineView(_ outlineView: NSOutlineView, rowViewForItem item: Any) -> NSTableRowView?
-//        {
-//        return(nil)
-//        }
-        
-    @objc public func outlineView(_ outlineView: NSOutlineView, shouldSelectItem item: Any) -> Bool
-        {
-//        guard outliner.isNotNil else
-//            {
-//            return(false)
-//            }
-//        let selectedRow = outliner!.selectedRow
-//        if selectedRow >= 0,let cell = outliner?.view(atColumn: 0, row: selectedRow, makeIfNecessary: false) as? HierarchyCellView
-//            {
-//            cell.revert()
-//            }
-        return(true)
-        }
     }
 
 extension JSONViewController: NSOutlineViewDelegate
     {
+    public func outlineViewColumnDidResize(_ notification: Notification)
+        {
+        
+        }
+        
     public func outlineViewSelectionDidChange(_ notification: Notification)
         {
         }
@@ -135,13 +138,18 @@ extension JSONViewController: NSOutlineViewDelegate
                 {
                 let view = outlineView.makeView(withIdentifier: Self.kTypeCellIdentifier, owner: nil) as! NSTableCellView
                 view.imageView?.image = element.typeIcon
+                view.imageView?.image?.isTemplate = true
                 view.imageView?.contentTintColor = NSColor.controlAccentColor
                 return(view)
                 }
             else if column.identifier == Self.kValueFieldIdentifier
                 {
-                let view = outlineView.makeView(withIdentifier: Self.kValueCellIdentifier, owner: nil) as! NSTableCellView
-                view.textField?.stringValue = element.value
+//                let view = outlineView.makeView(withIdentifier: Self.kValueCellIdentifier, owner: nil) as! NSTableCellView
+//                view.textField?.stringValue = element.value
+//                view.textField?.lineBreakMode = .byWordWrapping
+//                view.textField?.maximumNumberOfLines = -1
+                let view = TextViewCellView(frame: .zero)
+                view.string = element.value
                 return(view)
                 }
             }
