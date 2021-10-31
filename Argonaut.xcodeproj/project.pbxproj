@@ -8,13 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BF2DA88E272E96D0004B6068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA88D272E96D0004B6068 /* AppDelegate.swift */; };
-		BF2DA890272E96D0004B6068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA88F272E96D0004B6068 /* ViewController.swift */; };
+		BF2DA890272E96D0004B6068 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */; };
 		BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA891272E96D1004B6068 /* Assets.xcassets */; };
 		BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA893272E96D1004B6068 /* Main.storyboard */; };
 		BF2DA8A0272E96D2004B6068 /* ArgonautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */; };
 		BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */; };
 		BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */; };
 		BF2DA8B9272E9872004B6068 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8B8272E9872004B6068 /* README.md */; };
+		BF2DA8C0272E9BE8004B6068 /* JSONElementNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8BF272E9BE8004B6068 /* JSONElementNameCellView.swift */; };
+		BF2DA8C2272E9C02004B6068 /* JSONElementNameCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8C1272E9C02004B6068 /* JSONElementNameCellView.xib */; };
+		BF2DA8C4272E9C8D004B6068 /* JSONElementValueCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8C3272E9C8D004B6068 /* JSONElementValueCellView.swift */; };
+		BF2DA8C6272E9CB5004B6068 /* JSONElementValueCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8C5272E9CB5004B6068 /* JSONElementValueCellView.xib */; };
+		BF2DA8C8272E9ED4004B6068 /* JSONElementTypeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8C7272E9ED4004B6068 /* JSONElementTypeCellView.swift */; };
+		BF2DA8CA272E9F40004B6068 /* JSONElementTypeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8C9272E9F40004B6068 /* JSONElementTypeCellView.xib */; };
+		BF2DA8CC272EA368004B6068 /* JSONElementItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */; };
+		BF2DA8CE272EA478004B6068 /* JSONArrayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8CD272EA478004B6068 /* JSONArrayItem.swift */; };
+		BF2DA8D1272EA621004B6068 /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8D0272EA621004B6068 /* Optional+Extensions.swift */; };
+		BF2DA8D3272EA863004B6068 /* JSONObjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */; };
+		BF2DA8D6272EAA0F004B6068 /* RemoteServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8D5272EAA0F004B6068 /* RemoteServer.swift */; };
+		BF2DA8D9272EAA9D004B6068 /* Squad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8D8272EAA9D004B6068 /* Squad.swift */; };
+		BF2DA8DB272EAAFD004B6068 /* SquadMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8DA272EAAFD004B6068 /* SquadMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +50,7 @@
 /* Begin PBXFileReference section */
 		BF2DA88A272E96D0004B6068 /* Argonaut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argonaut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2DA88D272E96D0004B6068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF2DA88F272E96D0004B6068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
 		BF2DA891272E96D1004B6068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2DA894272E96D1004B6068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF2DA896272E96D1004B6068 /* Argonaut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Argonaut.entitlements; sourceTree = "<group>"; };
@@ -47,6 +60,19 @@
 		BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITests.swift; sourceTree = "<group>"; };
 		BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF2DA8B8272E9872004B6068 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BF2DA8BF272E9BE8004B6068 /* JSONElementNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElementNameCellView.swift; sourceTree = "<group>"; };
+		BF2DA8C1272E9C02004B6068 /* JSONElementNameCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONElementNameCellView.xib; sourceTree = "<group>"; };
+		BF2DA8C3272E9C8D004B6068 /* JSONElementValueCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElementValueCellView.swift; sourceTree = "<group>"; };
+		BF2DA8C5272E9CB5004B6068 /* JSONElementValueCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONElementValueCellView.xib; sourceTree = "<group>"; };
+		BF2DA8C7272E9ED4004B6068 /* JSONElementTypeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElementTypeCellView.swift; sourceTree = "<group>"; };
+		BF2DA8C9272E9F40004B6068 /* JSONElementTypeCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONElementTypeCellView.xib; sourceTree = "<group>"; };
+		BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElementItem.swift; sourceTree = "<group>"; };
+		BF2DA8CD272EA478004B6068 /* JSONArrayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONArrayItem.swift; sourceTree = "<group>"; };
+		BF2DA8D0272EA621004B6068 /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONObjectItem.swift; sourceTree = "<group>"; };
+		BF2DA8D5272EAA0F004B6068 /* RemoteServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServer.swift; sourceTree = "<group>"; };
+		BF2DA8D8272EAA9D004B6068 /* Squad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad.swift; sourceTree = "<group>"; };
+		BF2DA8DA272EAAFD004B6068 /* SquadMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +124,10 @@
 		BF2DA88C272E96D0004B6068 /* Argonaut */ = {
 			isa = PBXGroup;
 			children = (
-				BF2DA88D272E96D0004B6068 /* AppDelegate.swift */,
-				BF2DA88F272E96D0004B6068 /* ViewController.swift */,
-				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
-				BF2DA893272E96D1004B6068 /* Main.storyboard */,
+				BF2DA8D7272EAA83004B6068 /* Models */,
+				BF2DA8D4272EA9CE004B6068 /* URL Querying */,
+				BF2DA8CF272EA610004B6068 /* System Extensions */,
+				BF2DA8BA272E9AA8004B6068 /* User Interface */,
 				BF2DA896272E96D1004B6068 /* Argonaut.entitlements */,
 			);
 			path = Argonaut;
@@ -122,6 +148,51 @@
 				BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */,
 			);
 			path = ArgonautUITests;
+			sourceTree = "<group>";
+		};
+		BF2DA8BA272E9AA8004B6068 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */,
+				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
+				BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */,
+				BF2DA88D272E96D0004B6068 /* AppDelegate.swift */,
+				BF2DA893272E96D1004B6068 /* Main.storyboard */,
+				BF2DA8BF272E9BE8004B6068 /* JSONElementNameCellView.swift */,
+				BF2DA8C1272E9C02004B6068 /* JSONElementNameCellView.xib */,
+				BF2DA8C3272E9C8D004B6068 /* JSONElementValueCellView.swift */,
+				BF2DA8C5272E9CB5004B6068 /* JSONElementValueCellView.xib */,
+				BF2DA8C7272E9ED4004B6068 /* JSONElementTypeCellView.swift */,
+				BF2DA8C9272E9F40004B6068 /* JSONElementTypeCellView.xib */,
+				BF2DA8CD272EA478004B6068 /* JSONArrayItem.swift */,
+				BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		BF2DA8CF272EA610004B6068 /* System Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA8D0272EA621004B6068 /* Optional+Extensions.swift */,
+			);
+			path = "System Extensions";
+			sourceTree = "<group>";
+		};
+		BF2DA8D4272EA9CE004B6068 /* URL Querying */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA8D5272EAA0F004B6068 /* RemoteServer.swift */,
+			);
+			path = "URL Querying";
+			sourceTree = "<group>";
+		};
+		BF2DA8D7272EAA83004B6068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF2DA8D8272EAA9D004B6068 /* Squad.swift */,
+				BF2DA8DA272EAAFD004B6068 /* SquadMember.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2DA8B9272E9872004B6068 /* README.md in Resources */,
+				BF2DA8CA272E9F40004B6068 /* JSONElementTypeCellView.xib in Resources */,
 				BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */,
+				BF2DA8C2272E9C02004B6068 /* JSONElementNameCellView.xib in Resources */,
 				BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */,
+				BF2DA8C6272E9CB5004B6068 /* JSONElementValueCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +329,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF2DA890272E96D0004B6068 /* ViewController.swift in Sources */,
+				BF2DA8C8272E9ED4004B6068 /* JSONElementTypeCellView.swift in Sources */,
+				BF2DA8D9272EAA9D004B6068 /* Squad.swift in Sources */,
+				BF2DA890272E96D0004B6068 /* PrimaryViewController.swift in Sources */,
+				BF2DA8D6272EAA0F004B6068 /* RemoteServer.swift in Sources */,
 				BF2DA88E272E96D0004B6068 /* AppDelegate.swift in Sources */,
+				BF2DA8CE272EA478004B6068 /* JSONArrayItem.swift in Sources */,
+				BF2DA8D3272EA863004B6068 /* JSONObjectItem.swift in Sources */,
+				BF2DA8DB272EAAFD004B6068 /* SquadMember.swift in Sources */,
+				BF2DA8C0272E9BE8004B6068 /* JSONElementNameCellView.swift in Sources */,
+				BF2DA8D1272EA621004B6068 /* Optional+Extensions.swift in Sources */,
+				BF2DA8C4272E9C8D004B6068 /* JSONElementValueCellView.swift in Sources */,
+				BF2DA8CC272EA368004B6068 /* JSONElementItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,5 +29,20 @@ class ArgonautTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testRandomSquadMemberGeneration()
+        {
+        let count = Int.random(in: 0..<10)
+        var members = Array<SquadMember>()
+        for _ in 0..<count
+            {
+            members.append(SquadMember.makeRandomSquadMember())
+            }
+        for member in members
+            {
+            member.dump()
+            }
+        XCTPass("Creating random squad members passed")
+        }
 
 }
