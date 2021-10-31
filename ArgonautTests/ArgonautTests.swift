@@ -42,7 +42,16 @@ class ArgonautTests: XCTestCase {
             {
             member.dump()
             }
-        XCTPass("Creating random squad members passed")
+        }
+        
+    func testRandomSquadGeneration()
+        {
+        let count = Int.random(in: 3..<20)
+        for _ in 0..<count
+            {
+            let squad = Squad.makeRandomSquad()
+            squad.dump()
+            }
         }
 
 }

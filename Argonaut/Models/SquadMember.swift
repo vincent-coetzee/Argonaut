@@ -10,19 +10,19 @@ import Foundation
 internal struct SquadMember
     {
     private static let kPossibleMemberFirstNames = ["Radiation","Powerful","Super","Active","Perfect","Super","Mega","Light","Sound","Energy","Wave","Elastic","Strong"]
-    private static let kPossibleMemberSecondNames = ["Red","Man","Woman","Kid","Master","Mistress","Green","Yellow","Black","White","Orange"]
+    private static let kPossibleMemberSecondNames = ["Red","Man","Woman","Kid","Master","Mistress","Green","Yellow","Pink","Purple","Orange"]
     private static let kPossibleMemberSecretFirstNames = ["Peter","Petra","Alan","Vanessa","Veronica","Betty","Graham","June","Jennifer","Sharon","Catherine","Elizabeth","John","Paul"]
-    private static let kPossibleMemberSecretLastNames = ["Jones","DeWet","Marks","Cleary","Brown","Bowden","Greene","Black","Jackson","Deneuve","Taylor","Peters","Poenpal","Boxster"]
+    private static let kPossibleMemberSecretLastNames = ["Jones","DeWet","Marks","Cleary","Brown","Bowden","Greene","Rickman","Jackson","Deneuve","Taylor","Peters","Ponpal","Boxster"]
     private static let kPossibleMemberFirstPowers = ["Radiation","Sound","Energy","Light","Fire","Wave","Earth","Air","Rope","Rubber","Concrete","Wood","Stone","Steel","Engine"]
     private static let kPossibleMemberLastPowers = ["Controller","Master","Cycler","Generator","Twister","Manager","Sender","Slapper","Finder","Forcer","Manipulator","Receiver","Reviver","Starter","Stopper"]
     
     internal static func makeRandomSquadMember() -> SquadMember
         {
         let name = self.pickString(from: self.kPossibleMemberFirstNames) + " " + self.pickString(from: self.kPossibleMemberSecondNames)
-        let age = Int.random(in: 16...50)
+        let age = Int.random(in: 16...40)
         let secretIdentity = self.pickString(from: self.kPossibleMemberSecretFirstNames) + " " + self.pickString(from: self.kPossibleMemberSecretLastNames)
         var powers = Array<String>()
-        for _ in 0..<Int.random(in: 0..<4)
+        for _ in 0..<Int.random(in: 1..<4)
             {
             let power = self.pickString(from: kPossibleMemberFirstPowers) + " " + self.pickString(from: self.kPossibleMemberLastPowers)
             powers.append(power)

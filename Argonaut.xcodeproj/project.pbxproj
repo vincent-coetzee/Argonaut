@@ -12,8 +12,6 @@
 		BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA891272E96D1004B6068 /* Assets.xcassets */; };
 		BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA893272E96D1004B6068 /* Main.storyboard */; };
 		BF2DA8A0272E96D2004B6068 /* ArgonautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */; };
-		BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */; };
-		BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */; };
 		BF2DA8B9272E9872004B6068 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8B8272E9872004B6068 /* README.md */; };
 		BF2DA8C0272E9BE8004B6068 /* JSONElementNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8BF272E9BE8004B6068 /* JSONElementNameCellView.swift */; };
 		BF2DA8C2272E9C02004B6068 /* JSONElementNameCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8C1272E9C02004B6068 /* JSONElementNameCellView.xib */; };
@@ -38,13 +36,6 @@
 			remoteGlobalIDString = BF2DA889272E96D0004B6068;
 			remoteInfo = Argonaut;
 		};
-		BF2DA8A6272E96D2004B6068 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF2DA882272E96D0004B6068 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF2DA889272E96D0004B6068;
-			remoteInfo = Argonaut;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -56,9 +47,6 @@
 		BF2DA896272E96D1004B6068 /* Argonaut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Argonaut.entitlements; sourceTree = "<group>"; };
 		BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgonautTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautTests.swift; sourceTree = "<group>"; };
-		BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgonautUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITests.swift; sourceTree = "<group>"; };
-		BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BF2DA8B8272E9872004B6068 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF2DA8BF272E9BE8004B6068 /* JSONElementNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONElementNameCellView.swift; sourceTree = "<group>"; };
 		BF2DA8C1272E9C02004B6068 /* JSONElementNameCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONElementNameCellView.xib; sourceTree = "<group>"; };
@@ -90,13 +78,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF2DA8A2272E96D2004B6068 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,7 +87,6 @@
 				BF2DA8B8272E9872004B6068 /* README.md */,
 				BF2DA88C272E96D0004B6068 /* Argonaut */,
 				BF2DA89E272E96D1004B6068 /* ArgonautTests */,
-				BF2DA8A8272E96D2004B6068 /* ArgonautUITests */,
 				BF2DA88B272E96D0004B6068 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,7 +96,6 @@
 			children = (
 				BF2DA88A272E96D0004B6068 /* Argonaut.app */,
 				BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */,
-				BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,15 +118,6 @@
 				BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */,
 			);
 			path = ArgonautTests;
-			sourceTree = "<group>";
-		};
-		BF2DA8A8272E96D2004B6068 /* ArgonautUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */,
-				BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */,
-			);
-			path = ArgonautUITests;
 			sourceTree = "<group>";
 		};
 		BF2DA8BA272E9AA8004B6068 /* User Interface */ = {
@@ -233,24 +203,6 @@
 			productReference = BF2DA89B272E96D1004B6068 /* ArgonautTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF2DA8A4272E96D2004B6068 /* ArgonautUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF2DA8B5272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautUITests" */;
-			buildPhases = (
-				BF2DA8A1272E96D2004B6068 /* Sources */,
-				BF2DA8A2272E96D2004B6068 /* Frameworks */,
-				BF2DA8A3272E96D2004B6068 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF2DA8A7272E96D2004B6068 /* PBXTargetDependency */,
-			);
-			name = ArgonautUITests;
-			productName = ArgonautUITests;
-			productReference = BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,10 +217,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					BF2DA89A272E96D1004B6068 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = BF2DA889272E96D0004B6068;
-					};
-					BF2DA8A4272E96D2004B6068 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = BF2DA889272E96D0004B6068;
 					};
@@ -289,7 +237,6 @@
 			targets = (
 				BF2DA889272E96D0004B6068 /* Argonaut */,
 				BF2DA89A272E96D1004B6068 /* ArgonautTests */,
-				BF2DA8A4272E96D2004B6068 /* ArgonautUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,13 +256,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BF2DA899272E96D1004B6068 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF2DA8A3272E96D2004B6068 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,15 +292,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF2DA8A1272E96D2004B6068 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */,
-				BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -368,11 +299,6 @@
 			isa = PBXTargetDependency;
 			target = BF2DA889272E96D0004B6068 /* Argonaut */;
 			targetProxy = BF2DA89C272E96D1004B6068 /* PBXContainerItemProxy */;
-		};
-		BF2DA8A7272E96D2004B6068 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF2DA889272E96D0004B6068 /* Argonaut */;
-			targetProxy = BF2DA8A6272E96D2004B6068 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -607,52 +533,6 @@
 			};
 			name = Release;
 		};
-		BF2DA8B6272E96D2004B6068 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DLH9UBQV34;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Argonaut;
-			};
-			name = Debug;
-		};
-		BF2DA8B7272E96D2004B6068 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = DLH9UBQV34;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.macsemantics.ArgonautUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Argonaut;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -679,15 +559,6 @@
 			buildConfigurations = (
 				BF2DA8B3272E96D2004B6068 /* Debug */,
 				BF2DA8B4272E96D2004B6068 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF2DA8B5272E96D2004B6068 /* Build configuration list for PBXNativeTarget "ArgonautUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF2DA8B6272E96D2004B6068 /* Debug */,
-				BF2DA8B7272E96D2004B6068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
