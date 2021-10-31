@@ -14,6 +14,7 @@
 		BF2DA8A0272E96D2004B6068 /* ArgonautTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA89F272E96D2004B6068 /* ArgonautTests.swift */; };
 		BF2DA8AA272E96D2004B6068 /* ArgonautUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */; };
 		BF2DA8AC272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */; };
+		BF2DA8B9272E9872004B6068 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BF2DA8B8272E9872004B6068 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		BF2DA8A5272E96D2004B6068 /* ArgonautUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArgonautUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2DA8A9272E96D2004B6068 /* ArgonautUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITests.swift; sourceTree = "<group>"; };
 		BF2DA8AB272E96D2004B6068 /* ArgonautUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgonautUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF2DA8B8272E9872004B6068 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		BF2DA881272E96D0004B6068 = {
 			isa = PBXGroup;
 			children = (
+				BF2DA8B8272E9872004B6068 /* README.md */,
 				BF2DA88C272E96D0004B6068 /* Argonaut */,
 				BF2DA89E272E96D1004B6068 /* ArgonautTests */,
 				BF2DA8A8272E96D2004B6068 /* ArgonautUITests */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2DA8B9272E9872004B6068 /* README.md in Resources */,
 				BF2DA892272E96D1004B6068 /* Assets.xcassets in Resources */,
 				BF2DA895272E96D1004B6068 /* Main.storyboard in Resources */,
 			);
