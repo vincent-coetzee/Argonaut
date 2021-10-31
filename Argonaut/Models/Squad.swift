@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal struct Squad
+public struct Squad: Encodable
     {
     private static let kSquadPart1Names = ["Magic","Power","Control","Mega","Epsilon","Alpha","Go","Force"]
     private static let kSquadPart2Names = ["Squad","Group","Crew","People","Force"]
@@ -40,6 +40,9 @@ internal struct Squad
     internal let active: Bool
     internal let members: SquadMembers
     
+    ///
+    /// Convenience method for having a look at a squad during testing
+    ///
     internal func dump()
         {
         print("\nSQAD:\n")
@@ -51,21 +54,5 @@ internal struct Squad
             {
             member.dump()
             }
-        }
-    }
-
-extension Date
-    {
-    public static var randomPast:Date
-        {
-        let day = Int.random(in: 1...27)
-        let month = Int.random(in: 1...12)
-        var components = Calendar.current.dateComponents([.year],from: Date())
-        var year = components.year!
-        let yearDelta = Int.random(in: 0..<20)
-        year -= yearDelta
-        components = DateComponents(year: year,month: month,day: day)
-        let date = Calendar.current.date(from: components)!
-        return(date)
         }
     }

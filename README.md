@@ -26,3 +26,9 @@ will usually be placed after the definition of the unit type. For example, when 
 typealias "internal typealias SquadMembers = Array\<SquadMember\>" underneath the definition of the unit type. I do
 this because more often than not one makes use of the Array of the unit types and so it's convenient to have the
 plural defined as an array of the unit type.
+
+5. I intentionally use JSONEncoder when sending JSON but NSJSONSerialization when receiving JSON, the reason for this being
+it is usually easier to use JSONEncoder/JSONDecoder when working with JSON and structs/classes however I wish to display
+the JSON that is coming back from the server in a Tree structure ( i.e. in an NSOutlineView ) and in that case it is 
+easier to have JSON come back as Arrays and Dictionaries than as structures and classes which is why NSJSONSerialization
+is a better solution.

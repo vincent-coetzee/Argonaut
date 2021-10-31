@@ -7,8 +7,13 @@
 
 import Foundation
 
-internal struct SquadMember
+public struct SquadMember: Encodable
     {
+    ///
+    ///
+    /// Define various pieces of static information that will be used when generating random squad members.
+    ///
+    ///
     private static let kPossibleMemberFirstNames = ["Radiation","Powerful","Super","Active","Perfect","Super","Mega","Light","Sound","Energy","Wave","Elastic","Strong"]
     private static let kPossibleMemberSecondNames = ["Red","Man","Woman","Kid","Master","Mistress","Green","Yellow","Pink","Purple","Orange"]
     private static let kPossibleMemberSecretFirstNames = ["Peter","Petra","Alan","Vanessa","Veronica","Betty","Graham","June","Jennifer","Sharon","Catherine","Elizabeth","John","Paul"]
@@ -42,6 +47,9 @@ internal struct SquadMember
     internal let secretIdentity: String
     internal let powers: Array<String>
     
+    ///
+    /// Convenience method for having a look at a squad member during testing
+    ///
     internal func dump()
         {
         print("SQUAD MEMBER:\n")
@@ -52,4 +60,4 @@ internal struct SquadMember
         }
     }
 
-internal typealias SquadMembers = Array<SquadMember>
+public typealias SquadMembers = Array<SquadMember>

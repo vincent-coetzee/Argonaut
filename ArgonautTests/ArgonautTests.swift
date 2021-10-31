@@ -54,4 +54,23 @@ class ArgonautTests: XCTestCase {
             }
         }
 
+    func testSendingSquad()
+        {
+        let squad = Squad.makeRandomSquad()
+        let expectation = expectation(description: "Expect server response")
+        RemoteServer().sendSquad(squad)
+            {
+            result in
+            if case let RequestResult.success(payload) = result
+                {
+                print(payload)
+                }
+            else
+                {
+                print(result)
+                }
+            expectation.fulfill()
+            }
+        self.wait(for: [expectation], timeout: 60)
+        }
 }

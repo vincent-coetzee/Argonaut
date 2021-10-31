@@ -24,12 +24,24 @@ class PrimaryViewController: NSViewController
     /// of recognition.
     ///
     ///
-    private static let kRequestSegmentIndex = 0
-    private static let kResponseSegmentIndex = 1
+    private static let kRequestViewIndex = 0
+    private static let kResponseViewIndex = 1
+    private static let kJSONViewControllerNibName = "JSONViewController"
+    private static let kQueryFieldIdentifier = NSUserInterfaceItemIdentifier(rawValue: "QueryField")
+    private static let kQueryCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "QueryCell")
+    private static let kTimeFieldIdentifier = NSUserInterfaceItemIdentifier(rawValue: "TimeField")
+    private static let kTimeCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "TimeCell")
     
-    @IBOutlet var outliner: NSOutlineView!
+    private var requestController: JSONViewController!
+    private var responseController: JSONViewController!
+    private var queries: Queries = []
+    private var selectedQuery: Query?
+    
+    @IBOutlet var queryTableView: NSTableView!
     @IBOutlet var generateButton: NSButton!
-    @IBOutlet var requestResponseSelectionControl: NSSegmentedControl!
+    @IBOutlet var resultTabView: NSTabView!
+    @IBOutlet var verticalSplitView: NSSplitView!
+    @IBOutlet var resultTypeSegmentedControl: NSSegmentedControl!
     
     override func viewDidLoad()
         {
@@ -39,120 +51,138 @@ class PrimaryViewController: NSViewController
         
     private func initViews()
         {
-        }
-        
-    @IBAction func onRequestResponseClicked(_ sender: Any?)
-        {
-        let selectedIndex = self.requestResponseSelectionControl.selectedSegment
-        if selectedIndex == Self.kRequestSegmentIndex
-            {
-            self.switchViewToRequests()
-            }
-        else
-            {
-            self.switchViewToResponses()
-            }
+        self.requestController = JSONViewController(nibName: Self.kJSONViewControllerNibName, bundle: nil)
+        var item = self.resultTabView.tabViewItem(at: Self.kRequestViewIndex)
+        item.view = self.requestController.view
+        self.responseController = JSONViewController(nibName: Self.kJSONViewControllerNibName, bundle: nil)
+        item = self.resultTabView.tabViewItem(at: Self.kResponseViewIndex)
+        item.view = self.responseController.view
         }
         
     @IBAction func onGenerateNewRequestClicked(_ sender: Any?)
         {
+        let alert = NSAlert()
+        alert.messageText = "New Random Query"
+        alert.informativeText = "Would you like to generate a random query to the server ?"
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        alert.beginSheetModal(for: self.view.window!)
+            {
+            response in
+            alert.window.endSheet(self.view.window!)
+            if response.rawValue - 1000 == 0
+                {
+                self.generateNewRandomRequest()
+                }
+            }
         }
         
-    private func switchViewToRequests()
+    private func generateNewRandomRequest()
         {
+        do
+            {
+            let query = try Query.makeRandomQuery()
+            RemoteServer().sendQuery(query)
+                {
+                result in
+                if case let RequestResult.success(someQuery) = result
+                    {
+                    self.queries.append(someQuery)
+                    self.queries.sort{$0.date < $1.date}
+                    DispatchQueue.main.async
+                        {
+                        self.queryTableView.reloadData()
+                        }
+                    }
+                else
+                    {
+                    self.alertUser(ofError: result)
+                    }
+                }
+            }
+        catch let error as RequestResult
+            {
+            self.alertUser(ofError: error)
+            }
+        catch
+            {
+            self.alertUser(ofError: .unknownError)
+            }
         }
         
-    private func switchViewToResponses()
+    private func alertUser(ofError error: RequestResult)
         {
+        let alert = NSAlert()
+        alert.messageText = "Error Making Random Query"
+        alert.informativeText = error.errorMessage
+        alert.addButton(withTitle: "Dismiss")
+        alert.beginSheetModal(for: self.view.window!)
+            {
+            response in
+            alert.window.endSheet(self.view.window!)
+            }
+        }
+        
+    @IBAction func onViewTypeSelected(_ sender: Any?)
+        {
+        if self.resultTypeSegmentedControl.selectedSegment == Self.kRequestViewIndex
+            {
+            self.resultTabView.selectTabViewItem(at: Self.kRequestViewIndex)
+            }
+        else if self.resultTypeSegmentedControl.selectedSegment == Self.kResponseViewIndex
+            {
+            self.resultTabView.selectTabViewItem(at: Self.kResponseViewIndex)
+            }
+        }
+        
+    private func setSelectedQuery(_ query: Query)
+        {
+        self.selectedQuery = query
+        self.requestController.request = query.request
+        self.responseController.response = query.response
         }
     }
 
-extension PrimaryViewController: NSOutlineViewDataSource
+extension PrimaryViewController: NSTableViewDelegate
     {
-//    @objc public func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int
-//        {
-//        if item == nil
-//            {
-//            return(1)
-//            }
-//        else
-//            {
-//            let item = item as! FileItem
-//            return(item.childCount)
-//            }
-//        }
-//        
-//    @objc public func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat
-//        {
-//        return(18)
-//        }
-//        
-//    @objc public func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any
-//        {
-//        if item.isNil
-//            {
-//            return(self.currentItem)
-//            }
-//        else if let event = item as? FileItem
-//            {
-//            return(event.child(atIndex: index))
-//            }
-//        fatalError()
-//        }
-//
-//    @objc public func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool
-//        {
-//        if let event = item as? FileItem
-//            {
-//            return(event.isExpandable)
-//            }
-//        return(false)
-//        }
-//        
-//    @objc public func outlineView(_ outlineView: NSOutlineView, rowViewForItem item: Any) -> NSTableRowView?
-//        {
-//        return(nil)
-//        }
-//        
-//    @objc public func outlineView(_ outlineView: NSOutlineView, shouldSelectItem item: Any) -> Bool
-//        {
-////        guard outliner.isNotNil else
-////            {
-////            return(false)
-////            }
-////        let selectedRow = outliner!.selectedRow
-////        if selectedRow >= 0,let cell = outliner?.view(atColumn: 0, row: selectedRow, makeIfNecessary: false) as? HierarchyCellView
-////            {
-////            cell.revert()
-////            }
-//        return(true)
-//        }
-//
-//    public func outlineViewSelectionDidChange(_ notification: Notification)
-//        {
-//        let row = self.outliner.selectedRow
-//        if row != -1
-//            {
-//            if let item = self.outliner.item(atRow: row) as? FileItem,item.isIssue,let line = item.lineNumber
-//                {
-//                self.scrollToLineNumber(line)
-//                }
-//            }
-//        }
-//        
-//        
-//    public func outlineView(_ outlineView: NSOutlineView,viewFor tableColumn: NSTableColumn?,item: Any) -> NSView?
-//        {
-//        if let event = item as? FileItem
-//            {
-//            let view = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "FileItemCellView"), owner: nil) as! FileItemCellView
-//            event.configure(cell: view)
-//            return(view)
-//            }
-//        return(nil)
-//        }
+    func numberOfRows(in tableView: NSTableView) -> Int
+        {
+        self.queries.count
+        }
+        
+    func tableViewSelectionDidChange(_ notification: Notification)
+        {
+        let selectedRow = self.queryTableView.selectedRow
+        guard selectedRow != -1 else
+            {
+            return
+            }
+        self.setSelectedQuery(self.queries[selectedRow])
+        }
     }
 
-extension PrimaryViewController: NSOutlineViewDelegate
+extension PrimaryViewController: NSTableViewDataSource
     {
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
+        {
+        guard row < self.queries.count else
+            {
+            return(nil)
+            }
+        guard let column = tableColumn else
+            {
+            return(nil)
+            }
+        if column.identifier == Self.kQueryFieldIdentifier,let cell = tableView.makeView(withIdentifier: Self.kQueryCellIdentifier, owner: nil) as? NSTableCellView
+            {
+            cell.textField?.stringValue = self.queries[row].name
+            return(cell)
+            }
+        else if column.identifier == Self.kTimeFieldIdentifier,let cell = tableView.makeView(withIdentifier: Self.kTimeCellIdentifier, owner: nil) as? NSTableCellView
+            {
+            cell.textField?.stringValue = self.queries[row].dateString
+            return(cell)
+            }
+        return(nil)
+        }
     }
