@@ -34,6 +34,6 @@ easier to have JSON come back as Arrays and Dictionaries than as structures and 
 is a better solution.
 
 6. The fields handled for JSON are Object, Array, String, Number and Null, the reson for this being that these are the
-primary types that constitute JSON. I considered handling dates and times as well but there is not way of accurately 
+primary types that constitute JSON. I considered handling dates and times as well but there is no way of accurately 
 distinguishing a date or time field from any other numeric field in a valid way. If one is decoding a known piece of
 JSON then one could correctly decode dates and times but that severely limits the flexibility of the tool.
