@@ -16,13 +16,13 @@ internal class JSONViewController: NSViewController
     private static let kTypeCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "TypeCell")
     private static let kValueCellIdentifier = NSUserInterfaceItemIdentifier(rawValue: "ValueCell")
     
-    internal var json: NSDictionary?
+    internal var group: Group?
         {
         didSet
             {
-            if let dictionary = self.json
+            if let group = self.group
                 {
-                var converter = JSONTreeConverter(dictionary: dictionary)
+                var converter = JSONTreeConverter(group: group)
                 let elements = converter.convertToElementTree()
                 self.update(with: elements)
                 }
@@ -34,7 +34,7 @@ internal class JSONViewController: NSViewController
     @IBOutlet var typeColumn: NSTableColumn!
     
     private var items = JSONElementItems()
-    private var currentRowHeights: Array<Int> = []
+    private var columnWidths: Array<CGFloat> = []
     
     override func viewDidLoad()
         {
@@ -42,7 +42,8 @@ internal class JSONViewController: NSViewController
         self.outliner.dataSource = self
         self.outliner.delegate = self
         self.typeColumn.width = 38
-        self.outliner.font = NSFont.systemFont(ofSize: 14)
+        self.columnWidths = Array<CGFloat>(repeating: 0, count: self.outliner.tableColumns.count)
+        self.outliner.autoresizesOutlineColumn = true
         }
     
     private func update(with elements: JSONElementItems)
@@ -70,25 +71,28 @@ extension JSONViewController: NSOutlineViewDataSource
             }
         }
         
-    @objc public func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat
-        {
-        guard let element = item as? JSONElementItem else
-            {
-            return(0)
-            }
-        guard let column = outlineView.tableColumn(withIdentifier: Self.kValueFieldIdentifier) else
-            {
-            return(0)
-            }
-        let width = column.width
-        let startSize = NSSize(width: width,height: 0)
-        let font = NSFont.systemFont(ofSize: 14)
-        let string = element.isNull ? "" : element.value
-        let attributedString = NSAttributedString(string: string,attributes: [.font: font])
-        let rect = attributedString.boundingRect(with: startSize, options: [.usesFontLeading,.usesLineFragmentOrigin])
-        print("STRING: \(string) RECT: \(rect)")
-        return(rect.size.height)
-        }
+//    @objc public func outlineView(_ outlineView: NSOutlineView, heightOfRowByItem item: Any) -> CGFloat
+//        {
+//        guard let element = item as? JSONElementItem else
+//            {
+//            return(0)
+//            }
+//        guard let column = outlineView.tableColumn(withIdentifier: Self.kValueFieldIdentifier) else
+//            {
+//            return(0)
+//            }
+//        let row = outlineView.row(forItem: item)
+//        let width = column.width
+//        let startSize = NSSize(width: width,height: 0)
+//        let attributedString = NSAttributedString(string: element.value,attributes: [.font: self.font])
+//        let rect = attributedString.boundingRect(with: startSize, options: [.usesFontLeading,.usesLineFragmentOrigin])
+//        if rect.size.height > self.font.pointSize + 4.0
+//            {
+//            self.largeRowHeights.insert(row)
+//            }
+//        print("STRING: \(element.value) RECT: \(rect)")
+//        return(rect.size.height)
+//        }
         
     @objc public func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any
         {
@@ -115,10 +119,29 @@ extension JSONViewController: NSOutlineViewDataSource
 
 extension JSONViewController: NSOutlineViewDelegate
     {
-    public func outlineViewColumnDidResize(_ notification: Notification)
-        {
-        
-        }
+//    public func outlineViewItemDidExpand(_ notification: Notification)
+//        {
+//        if let item = notification.userInfo?["NSObject"] as? JSONElementItem
+//            {
+//            let row = self.outliner.row(forItem: item)
+//            guard row != -1 else
+//                {
+//                return
+//                }
+//            for index in 0..<self.outliner.tableColumns.count
+//                {
+//                if let cell = self.outliner.view(atColumn: index, row: row, makeIfNecessary: false) as? NSTableCellView,let textField = cell.textField
+//                    {
+//                    let width = textField.attributedStringValue.size().width
+//                    if width > self.columnWidths[index]
+//                        {
+//                        self.columnWidths[index] = width
+//                        self.outliner.tableColumns[index].width = width
+//                        }
+//                    }
+//                }
+//            }
+//        }
         
     public func outlineViewSelectionDidChange(_ notification: Notification)
         {
@@ -144,12 +167,10 @@ extension JSONViewController: NSOutlineViewDelegate
                 }
             else if column.identifier == Self.kValueFieldIdentifier
                 {
-//                let view = outlineView.makeView(withIdentifier: Self.kValueCellIdentifier, owner: nil) as! NSTableCellView
-//                view.textField?.stringValue = element.value
-//                view.textField?.lineBreakMode = .byWordWrapping
-//                view.textField?.maximumNumberOfLines = -1
-                let view = TextViewCellView(frame: .zero)
-                view.string = element.value
+                let view = outlineView.makeView(withIdentifier: Self.kValueCellIdentifier, owner: nil) as! NSTableCellView
+                view.textField?.stringValue = element.value
+                view.textField?.lineBreakMode = .byWordWrapping
+                view.textField?.maximumNumberOfLines = 0
                 return(view)
                 }
             }

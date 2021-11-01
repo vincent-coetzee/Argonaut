@@ -9,11 +9,6 @@ import Cocoa
 
 internal class JSONNullItem: JSONElementItem
     {
-    internal override var isNull: Bool
-        {
-        true
-        }
-        
     internal override var typeIcon: NSImage
         {
         NSImage(named: "JSONIconNull")!

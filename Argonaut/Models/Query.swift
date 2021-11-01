@@ -26,7 +26,7 @@ internal class Query
         let data = try JSONEncoder().encode(squad)
         if let json = try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary
             {
-            let request = Request(method: "POST", url: URL(string: RemoteServer.kServerURL)!,payload: data,json: json)
+            let request = Request(method: "POST", url: URL(string: RemoteServer.kServerURL)!,payload: data,rawJSON: json)
             return(Query(name: name, date: date, request: request))
             }
         throw(RequestResult.convertingToJSONFailed)

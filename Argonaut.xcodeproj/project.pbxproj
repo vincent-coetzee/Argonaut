@@ -21,6 +21,9 @@
 		BF2DA8D9272EAA9D004B6068 /* Squad.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8D8272EAA9D004B6068 /* Squad.swift */; };
 		BF2DA8DB272EAAFD004B6068 /* SquadMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8DA272EAAFD004B6068 /* SquadMember.swift */; };
 		BF2DA8DD272EBC6D004B6068 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DA8DC272EBC6D004B6068 /* Date+Extensions.swift */; };
+		BF4AD5C2272FBA7500F0BE3C /* QueryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AD5C1272FBA7500F0BE3C /* QueryResult.swift */; };
+		BF4AD5C4272FC9B300F0BE3C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AD5C3272FC9B300F0BE3C /* Group.swift */; };
+		BF4AD5C6272FCC1800F0BE3C /* JSONGroupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4AD5C5272FCC1800F0BE3C /* JSONGroupItem.swift */; };
 		BFFF671D272ED03800E51A1A /* JSONTreeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF671C272ED03800E51A1A /* JSONTreeConverter.swift */; };
 		BFFF6721272ED9F500E51A1A /* JSONNumberItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6720272ED9F500E51A1A /* JSONNumberItem.swift */; };
 		BFFF6723272EDA3E00E51A1A /* JSONStringItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6722272EDA3E00E51A1A /* JSONStringItem.swift */; };
@@ -31,7 +34,6 @@
 		BFFF6732272EE50D00E51A1A /* JSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6730272EE50D00E51A1A /* JSONViewController.swift */; };
 		BFFF6733272EE50D00E51A1A /* JSONViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFFF6731272EE50D00E51A1A /* JSONViewController.xib */; };
 		BFFF6737272EF59500E51A1A /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6736272EF59500E51A1A /* RequestResult.swift */; };
-		BFFF6739272F14F100E51A1A /* TextViewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF6738272F14F100E51A1A /* TextViewCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		BF2DA8D8272EAA9D004B6068 /* Squad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad.swift; sourceTree = "<group>"; };
 		BF2DA8DA272EAAFD004B6068 /* SquadMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadMember.swift; sourceTree = "<group>"; };
 		BF2DA8DC272EBC6D004B6068 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		BF4AD5C1272FBA7500F0BE3C /* QueryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResult.swift; sourceTree = "<group>"; };
+		BF4AD5C3272FC9B300F0BE3C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		BF4AD5C5272FCC1800F0BE3C /* JSONGroupItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONGroupItem.swift; sourceTree = "<group>"; };
 		BFFF671C272ED03800E51A1A /* JSONTreeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTreeConverter.swift; sourceTree = "<group>"; };
 		BFFF6720272ED9F500E51A1A /* JSONNumberItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNumberItem.swift; sourceTree = "<group>"; };
 		BFFF6722272EDA3E00E51A1A /* JSONStringItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONStringItem.swift; sourceTree = "<group>"; };
@@ -72,7 +77,6 @@
 		BFFF6730272EE50D00E51A1A /* JSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONViewController.swift; sourceTree = "<group>"; };
 		BFFF6731272EE50D00E51A1A /* JSONViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSONViewController.xib; sourceTree = "<group>"; };
 		BFFF6736272EF59500E51A1A /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
-		BFFF6738272F14F100E51A1A /* TextViewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 				BF2DA891272E96D1004B6068 /* Assets.xcassets */,
 				BF2DA8CD272EA478004B6068 /* JSONArrayItem.swift */,
 				BF2DA8CB272EA368004B6068 /* JSONElementItem.swift */,
+				BF4AD5C5272FCC1800F0BE3C /* JSONGroupItem.swift */,
 				BFFF6724272EDA6800E51A1A /* JSONNullItem.swift */,
 				BFFF6720272ED9F500E51A1A /* JSONNumberItem.swift */,
 				BF2DA8D2272EA863004B6068 /* JSONObjectItem.swift */,
@@ -148,7 +153,6 @@
 				BFFF6731272EE50D00E51A1A /* JSONViewController.xib */,
 				BF2DA893272E96D1004B6068 /* Main.storyboard */,
 				BF2DA88F272E96D0004B6068 /* PrimaryViewController.swift */,
-				BFFF6738272F14F100E51A1A /* TextViewCellView.swift */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -179,6 +183,8 @@
 				BFFF6728272EDF1100E51A1A /* Query.swift */,
 				BFFF672A272EDF4B00E51A1A /* Request.swift */,
 				BFFF672C272EDFEF00E51A1A /* Response.swift */,
+				BF4AD5C1272FBA7500F0BE3C /* QueryResult.swift */,
+				BF4AD5C3272FC9B300F0BE3C /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4AD5C4272FC9B300F0BE3C /* Group.swift in Sources */,
 				BF2DA8D9272EAA9D004B6068 /* Squad.swift in Sources */,
 				BF2DA890272E96D0004B6068 /* PrimaryViewController.swift in Sources */,
 				BFFF6737272EF59500E51A1A /* RequestResult.swift in Sources */,
@@ -296,12 +303,13 @@
 				BF2DA88E272E96D0004B6068 /* AppDelegate.swift in Sources */,
 				BFFF672B272EDF4B00E51A1A /* Request.swift in Sources */,
 				BF2DA8CE272EA478004B6068 /* JSONArrayItem.swift in Sources */,
+				BF4AD5C6272FCC1800F0BE3C /* JSONGroupItem.swift in Sources */,
 				BFFF6725272EDA6800E51A1A /* JSONNullItem.swift in Sources */,
 				BF2DA8D3272EA863004B6068 /* JSONObjectItem.swift in Sources */,
 				BF2DA8DB272EAAFD004B6068 /* SquadMember.swift in Sources */,
 				BFFF671D272ED03800E51A1A /* JSONTreeConverter.swift in Sources */,
 				BFFF6729272EDF1100E51A1A /* Query.swift in Sources */,
-				BFFF6739272F14F100E51A1A /* TextViewCellView.swift in Sources */,
+				BF4AD5C2272FBA7500F0BE3C /* QueryResult.swift in Sources */,
 				BF2DA8D1272EA621004B6068 /* Optional+Extensions.swift in Sources */,
 				BF2DA8CC272EA368004B6068 /* JSONElementItem.swift in Sources */,
 				BFFF6723272EDA3E00E51A1A /* JSONStringItem.swift in Sources */,

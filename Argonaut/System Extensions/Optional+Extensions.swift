@@ -9,6 +9,10 @@ import Foundation
 
 extension Optional
     {
+    ///
+    /// Tests this optional to see whether it is nil or not and returns
+    /// true of false accordingly. Convenience method.
+    ///
     internal var isNil: Bool
         {
         switch(self)
@@ -19,7 +23,9 @@ extension Optional
                 return(false)
             }
         }
-        
+    ///
+    /// See above comment
+    /// 
     internal var isNotNil: Bool
         {
         switch(self)

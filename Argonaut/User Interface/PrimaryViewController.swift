@@ -51,6 +51,8 @@ class PrimaryViewController: NSViewController
         self.responseController = JSONViewController(nibName: Self.kJSONViewControllerNibName, bundle: nil)
         item = self.resultTabView.tabViewItem(at: Self.kResponseViewIndex)
         item.view = self.responseController.view
+        let splitWidth = self.verticalSplitView.bounds.size.width
+        self.verticalSplitView.setPosition(splitWidth / 5 * 2,ofDividerAt: 0)
         }
         
     @IBAction func onGenerateNewRequestClicked(_ sender: Any?)
@@ -132,8 +134,10 @@ class PrimaryViewController: NSViewController
     private func setSelectedQuery(_ query: Query)
         {
         self.selectedQuery = query
-        self.requestController.json = query.request.json
-        self.responseController.json = query.response?.json
+        self.requestController.group = query.request.group
+        self.responseController.group = query.response?.group
+        self.resultTabView.selectTabViewItem(at: Self.kRequestViewIndex)
+        self.resultTypeSegmentedControl.selectedSegment = Self.kRequestViewIndex
         }
     }
 

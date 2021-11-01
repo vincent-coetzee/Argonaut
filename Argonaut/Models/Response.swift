@@ -12,10 +12,17 @@ import Foundation
 ///
 public class Response
     {
-    internal var json: NSDictionary
-    
-    init(json: NSDictionary)
+    internal var group: Group
         {
-        self.json = json
+        let main = Group(key: "Response")
+        main.addChild(self.rawJSON,atKey: "data")
+        return(main)
+        }
+        
+    internal var rawJSON: NSDictionary
+    
+    init(rawJSON: NSDictionary)
+        {
+        self.rawJSON = rawJSON
         }
     }

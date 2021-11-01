@@ -7,11 +7,24 @@
 
 import AppKit
 
+///
+///
+/// A JSONElementItem wraps a particular piece of JSON data in a way that
+/// is appropriate for it to be formatted and displayed. The reason only
+/// Objects, Arrays, Strings, Numbers and Nulls are handled is because those
+/// are the primary types that constutitute JSON. There is also a Group items
+/// for displaying groups of elements.
+///
+///
 internal class JSONElementItem
     {
     internal class func element(with name: String,from element: Any) -> JSONElementItem
         {
-        if element is NSDictionary
+        if element is Group
+            {
+            return(JSONGroupItem(name: name,group: element as! Group))
+            }
+        else if element is NSDictionary
             {
             return(JSONObjectItem(name: name,dictionary: element as! NSDictionary))
             }
@@ -36,12 +49,7 @@ internal class JSONElementItem
             fatalError("This should not happen because it means the response from the server violated the definition of JSON.")
             }
         }
-        
-    internal var isNull: Bool
-        {
-        false
-        }
-        
+
     internal var typeIcon: NSImage
         {
         fatalError("This should have been overridden in a subclass.")
@@ -49,7 +57,7 @@ internal class JSONElementItem
         
     internal var value: String
         {
-        fatalError("This should have been overridden in a subclass.")
+        ""
         }
         
     internal var childCount: Int

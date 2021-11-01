@@ -7,6 +7,9 @@
 
 import Foundation
 
+///
+/// A holder for errors and results
+/// 
 internal enum RequestResult: Error
     {
     case encodingFailed(Error)

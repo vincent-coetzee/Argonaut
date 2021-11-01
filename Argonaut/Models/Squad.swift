@@ -16,7 +16,7 @@ import Foundation
 /// data the is structured as Arrays and Dictionaries.
 ///
 ///
-public struct Squad: Encodable
+public struct Squad: Encodable,Decodable
     {
     ///
     /// Random information to be used when generating a random squad
@@ -25,13 +25,15 @@ public struct Squad: Encodable
     private static let kSquadPart1Names = ["Magic","Power","Control","Mega","Epsilon","Alpha","Go","Force"]
     private static let kSquadPart2Names = ["Squad","Group","Crew","People","Force"]
     private static let kHomeTownNames = ["Mega City","Little Place","Big Rock","Little Rock","Smallville","Townsville","Placeville","Peace Town","Magic Rock","Big Falls","Little Falls","Little River","Big River","Rock River"]
+    private static let kMinimumMemberCount = 2
+    private static let kMaximumMemberCount = 7
     
     internal static func makeRandomSquad() -> Squad
         {
         let name = self.pickString(from: self.kSquadPart1Names) + " " + self.pickString(from: self.kSquadPart2Names)
         let homeTown = self.pickString(from: self.kHomeTownNames)
         let active = Int.random(in: 0...1) == 0
-        let memberCount = Int.random(in: 0..<6)
+        let memberCount = Int.random(in: Self.kMinimumMemberCount..<Self.kMaximumMemberCount)
         var members = SquadMembers()
         for _ in 0..<memberCount
             {
@@ -53,11 +55,11 @@ public struct Squad: Encodable
     ///
     /// The fields that a Squad has
     /// 
-    internal let squadName: String
-    internal let formed: Date
-    internal let homeTown: String
-    internal let active: Bool
-    internal let members: SquadMembers
+    public let squadName: String
+    public let formed: Date
+    public let homeTown: String
+    public let active: Bool
+    public let members: SquadMembers
     
     ///
     /// Convenience method for having a look at a squad during testing
