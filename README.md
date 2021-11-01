@@ -21,7 +21,7 @@ a) one's intentions of using the instance variable rather than a local variable 
 if there is in fact a local variable with the same name that is shadowing the instance variable that the instance
 variable will be used over the local variable.
 
-4. I typically define the the plural of a type as the type name + "s" as an array of the unit type. This definition
+4. I typically define the plural of a type as the type name + "s" as an array of the unit type. This definition
 will usually be placed after the definition of the unit type. For example, when I define "SquadMember", I define the
 typealias "internal typealias SquadMembers = Array\<SquadMember\>" underneath the definition of the unit type. I do
 this because more often than not one makes use of the Array of the unit types and so it's convenient to have the
